@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+$primary-color: #ff5e00;
+$secondary-color: #FF8C00;
+$background-color: #222222;
+$text-color: #FFFFFF;
+$white-opacity: rgba(255,255,255,0.5);
+$blue-violet: rgb(63,94,251);
+$pink-red: rgba(252,70,107,1);
+$black: #222;
+$inst-gradient: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+
+$nornal-fontsize: 18px;
+$button-fontsize: 24px;
+$big-fontsize: 56px;
+$realtime-fontsize: 36px;
+
+$poppins-font: 'Poppins', sans-serif;
+
+
+body {
+  height: 100vh;
+  //background: radial-gradient(circle, $blue-violet 0%, $black 100%);
+  background: $inst-gradient;
+
+  header {
+    width: 100%;
+    height: 10vh;
+    background: $background-color;  
+    display: flex;
+    align-items: center; /* Центрирует содержимое по вертикали */
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      li {
+
+        a {
+          font-size: $nornal-fontsize;
+          font-family: $poppins-font;
+          margin: 10px;
+          text-decoration: none;
+          color: $text-color;
+          transition: color 0.4s ease; // Применяем transition к свойству color
+
+
+          &:hover {
+            color: $primary-color;
+            transition: all .5s ease;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: $nornal-fontsize;
+    font-family: $poppins-font;
+    color: $text-color;
+    font-size: $big-fontsize;
+  }
+
+  .container {
+    position: absolute;
+    top:  55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 550px; 
+    background: $white-opacity; 
+    border-radius: 50px;
+    margin-inline: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    //box-shadow: 0 10px 45px $secondary-color;
+
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $realtime-fontsize;
+      font-family: $poppins-font;
+    }
+    span:nth-child(1) {
+      padding-bottom: 20px;
+    }
+    .inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+  
+      input, span {
+        width: 90px;
+        font-size: 18px;
+        color: $text-color; 
+        background-color: $background-color;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center; 
+      }
+  
+      span {
+        width: 290px;
+        font-size: 32px;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    
+      button {
+        background-color: $primary-color;
+        color: $text-color;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 150px;
+        margin: 3px;
+
+        transition-property: $primary-color, $text-color;
+        transition-duration: 3s;
+        transition-delay: 0s, 1s;
+        transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear;
+  
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}

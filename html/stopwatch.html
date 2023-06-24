@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css"> 
+    <title>Stopwatch</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="../html/realtime.html">Real Time</a></li>
+            <li><a href="../html/timer.html">Timer</a></li>
+            <li><a href="../html/stopwatch.html">Stopwatch</a></li>
+        </ul>
+    </header>
+    <p>Stopwatch</p>
+    <section class="container">
+        <div class="inputs">
+            <span id="stopwatch" type="number">00:00:00</span>
+        </div>
+        <div class="buttons">
+            <button id="start" onclick="startStopwatch()">Start</button>
+            <button id="pause" onclick="pauseStopwatch()">Pause</button>
+            <button id="reset" onclick="resetStopwatch()">Reset</button>
+        </div>
+    </section>
+
+    <script src="../js/helper.js"></script>
+    <script src="../js/stopwatch.js"></script>
+    <script src="../js/validate.js"></script>
+</body>
+</html>
